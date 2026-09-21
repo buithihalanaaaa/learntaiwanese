@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-:root { --red:#e63946; --ink:#191919; --muted:#747474; --paper:#fff; --canvas:#f4f3f0; --line:#e5e3df; --green:#188653; --orange:#c97816; font-family:'DM Sans', sans-serif; color:var(--ink); background:var(--canvas); }
+:root { --red:#e63946; --ink:#191919; --muted:#747474; --paper:#fff; --canvas:#f4f3f0; --line:#e5e3df; --green:#188653; --orange:#c97816; font-family:'Be Vietnam Pro', sans-serif; color:var(--ink); background:var(--canvas); }
 * { box-sizing:border-box; } body { margin:0; min-width:320px; background:radial-gradient(circle at top right, #ffe4e0 0, transparent 28rem), var(--canvas); } button, input, select { font:inherit; } button { cursor:pointer; }
 .app-shell { width:min(760px, 100%); margin:auto; padding:22px 16px calc(32px + env(safe-area-inset-bottom)); } .app-header { position:relative; display:flex; align-items:center; gap:13px; margin-bottom:18px; } .brand-mark { flex:0 0 52px; height:52px; display:grid; place-items:center; color:#fff; background:var(--red); border-radius:16px; font:700 22px 'Space Grotesk'; box-shadow:0 8px 18px #e6394633; } h1 { margin:2px 0 3px; font:700 clamp(1.05rem, 4vw, 1.35rem) 'Space Grotesk'; } p { margin:0; } .eyebrow { color:var(--red); text-transform:uppercase; letter-spacing:.11em; font-size:.65rem; font-weight:700; } .muted { color:var(--muted); font-size:.76rem; } .icon-button { margin-left:auto; border:0; border-radius:12px; width:42px; height:42px; background:transparent; color:var(--muted); font-size:1.3rem; letter-spacing:2px; } .icon-button:hover { background:#00000009; } .menu { position:absolute; right:0; top:48px; z-index:5; padding:6px; background:var(--paper); border:1px solid var(--line); border-radius:14px; box-shadow:0 12px 30px #0002; } .menu button { display:block; width:180px; padding:10px 12px; border:0; text-align:left; background:none; border-radius:9px; } .menu button:hover { background:var(--canvas); } .menu-divider { height:1px; margin:5px 4px; background:var(--line); }
 .panel { background:var(--paper); border:1px solid #00000008; border-radius:20px; padding:16px; margin-bottom:14px; box-shadow:0 8px 24px #25252508; } .section-heading { display:flex; justify-content:space-between; color:var(--muted); font-size:.7rem; font-weight:700; letter-spacing:.08em; } .section-heading strong { color:var(--red); letter-spacing:0; } .progress-track { height:8px; overflow:hidden; margin:12px 0; border-radius:9px; background:#eeecea; } .progress-value { height:100%; width:0; background:var(--red); border-radius:inherit; transition:width .3s ease; } .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; } .stat { display:grid; justify-items:center; gap:2px; padding:8px 4px; border-radius:12px; font-size:.69rem; } .stat strong { font-size:1.05rem; } .stat.mastered { color:var(--green); background:#18865312; } .stat.review { color:var(--orange); background:#c9781612; } .stat.fresh { color:var(--muted); background:#77777710; }
@@ -23,24 +23,24 @@
 .vocab-card:focus-visible { outline:3px solid var(--red); outline-offset:3px; }
 .vocab-card:active { transform:scale(.994); }
 .vocab-card .card-front-content { display:flex; flex-direction:column; justify-content:center; gap:12px; }
-.vocab-card .card-front-content h2 { font-family:"PingFang TC","Noto Sans TC",sans-serif; font-size:clamp(2.9rem,12vw,4.6rem); line-height:1.4; overflow-wrap:anywhere; }
+.vocab-card .card-front-content h2 { font-family: "KaiTi", "楷体", serif; font-size:clamp(2.9rem,12vw,4.6rem); line-height:1.4; overflow-wrap:anywhere; }
 .vocab-reading { font-size:clamp(1.05rem,4vw,1.55rem); font-weight:600; overflow-wrap:anywhere; }
 .vocab-pinyin { font-size:1.05rem; color:var(--muted); }
 .vocab-card .card-footer .group { max-width:58%; text-align:right; }
 .vocab-back { margin-top:10px; overflow:visible; }
 .vocab-back-head { text-align:center; padding:0 0 13px; border-bottom:1px solid var(--line); }
-.vocab-back-head h2 { margin:0 0 3px; font-family:"PingFang TC","Noto Sans TC",sans-serif; font-size:clamp(1.75rem,7vw,2.55rem); }
+.vocab-back-head h2 { margin:0 0 3px; font-family: "KaiTi", "楷体", serif; font-size:clamp(1.75rem,7vw,2.55rem); }
 .vocab-back-head strong { display:block; font-size:1.18rem; line-height:1.4; }
 .vocab-back-head p { margin-top:6px; font-size:.76rem; line-height:1.6; color:var(--muted); }
 .vocab-section-label { color:var(--red); letter-spacing:.065em; font-size:.67rem; font-weight:800; margin:16px 0 8px; }
 .hanzi-parts { display:grid; grid-template-columns:repeat(auto-fit,minmax(76px,1fr)); gap:7px; }
 .hanzi-part { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; min-width:0; padding:9px 4px; background:var(--paper); border:1px solid var(--line); border-radius:11px; text-align:center; }
-.hanzi-part strong { font-family:"PingFang TC","Noto Sans TC",sans-serif; font-size:1.6rem; }
+.hanzi-part strong { font-family: "KaiTi", "楷体", serif; font-size:1.6rem; }
 .hanzi-part b { font-size:.81rem; }
 .hanzi-part small { color:var(--muted); font-size:.68rem; line-height:1.3; }
 .vocab-related { line-height:1.6; font-size:.83rem; }
 .vocab-example { background:var(--paper); border:1px solid var(--line); border-radius:11px; padding:11px; line-height:1.65; }
-.vocab-example b { display:block; font-family:"PingFang TC","Noto Sans TC",sans-serif; font-size:1.05rem; }
+.vocab-example b { display:block; font-family: "KaiTi", "楷体", serif; font-size:1.05rem; }
 .vocab-example small { display:block; color:var(--muted); font-size:.72rem; overflow-wrap:anywhere; }
 .vocab-example p { font-size:.81rem; }
 .vocab-return { margin-top:18px; text-align:center; color:var(--muted); font-size:.69rem; }

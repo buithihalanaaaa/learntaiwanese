@@ -159,8 +159,7 @@ function frontTemplate(card) {
   return `<article class="card vocab-card" data-action="flip" role="button" tabindex="0" aria-label="Chạm để xem mặt sau">
     <div class="card-face"><div class="card-label"><span>MẶT TRƯỚC · NHẬN DIỆN</span><span class="group">${escapeHtml(card.section)}</span></div>
     <div class="card-front-content"><h2 lang="zh-Hant">${escapeHtml(card.front)}</h2>
-    <div class="vocab-reading" lang="zh-Bopo">${escapeHtml(card.zhuyin)}</div>
-    <div class="vocab-pinyin">${escapeHtml(card.pinyin)}</div><span class="hint">Chạm vào thẻ để xem đáp án</span></div>
+    <span class="hint">Chạm vào thẻ để xem đáp án</span></div>
     <div class="card-footer">${badge(card)}<span class="group">${escapeHtml(card.groupName)}</span></div></div></article>`;
 }
 function backTemplate(card) {
@@ -172,7 +171,10 @@ function backTemplate(card) {
   const exampleBox=example?`<div class="vocab-section-label">VÍ DỤ</div><div class="vocab-example"><b lang="zh-Hant">${escapeHtml(example.traditional)}</b>${example.zhuyin?`<small>${escapeHtml(example.zhuyin)}</small>`:''}${example.pinyin?`<small>${escapeHtml(example.pinyin)}</small>`:''}<p>${escapeHtml(example.meaning_vi||'')}</p></div>`:'';
   return `<article class="card vocab-card" data-action="flip" role="button" tabindex="0" aria-label="Chạm để quay lại mặt trước"><div class="card-face">
     <div class="card-label"><span>MẶT SAU · KIẾN THỨC</span><span class="group">${escapeHtml(card.section)}</span></div>
-    <div class="back-content vocab-back"><div class="vocab-back-head"><h2 lang="zh-Hant">${escapeHtml(card.front)}</h2><strong>${escapeHtml(card.meaning)}</strong>
+    <div class="back-content vocab-back"><div class="vocab-back-head"><h2 lang="zh-Hant">${escapeHtml(card.front)}</h2>
+    <div class="vocab-reading" lang="zh-Bopo">${escapeHtml(card.zhuyin)}</div>
+    <div class="vocab-pinyin">${escapeHtml(card.pinyin)}</div>
+    <strong>${escapeHtml(card.meaning)}</strong>
     <p>Âm Hán Việt: ${escapeHtml(card.hanViet)||'—'} · ${escapeHtml(card.pos.join(', ')||'Chưa phân loại')}${measure}</p></div>
     ${characterBox}${relatedBox}${exampleBox}${card.usage?`<details class="vocab-extra"><summary>Xem thêm · Cách dùng</summary><p>${escapeHtml(card.usage)}</p></details>`:''}
     <div class="vocab-return">Chạm vào thẻ để quay lại</div></div>
